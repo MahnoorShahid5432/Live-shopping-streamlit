@@ -1,0 +1,31 @@
+[0m14:50:53.383972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111615b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114400740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114400440>]}
+
+
+============================== 14:50:53.386436 | 53a11222-5fdf-4b00-a48f-aead5f625243 ==============================
+[0m14:50:53.386436 [info ] [MainThread]: Running with dbt=1.10.4
+[0m14:50:53.386692 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/sarahxiong/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init live_shopping_dbt', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:50:53.393913 [info ] [MainThread]: Creating dbt configuration folder at /Users/sarahxiong/.dbt
+[0m14:50:53.394595 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m14:50:53.397027 [info ] [MainThread]: 
+Your new dbt project "live_shopping_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:50:53.397169 [info ] [MainThread]: Setting up your profile.
+[0m14:55:28.241363 [info ] [MainThread]: Profile live_shopping_dbt written to /Users/sarahxiong/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:55:28.245926 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 274.89218, "process_in_blocks": "0", "process_kernel_time": 0.561882, "process_mem_max_rss": "401833984", "process_out_blocks": "0", "process_user_time": 3.200366}
+[0m14:55:28.247511 [debug] [MainThread]: Command `dbt init` succeeded at 14:55:28.247175 after 274.89 seconds
+[0m14:55:28.248786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16d9f8cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ed143b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x16ed17aa0>]}
+[0m14:55:28.249821 [debug] [MainThread]: Flushing usage events
+[0m14:55:28.834923 [debug] [MainThread]: An error was encountered while trying to flush usage events
