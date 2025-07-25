@@ -1,15 +1,77 @@
-Welcome to your new dbt project!
+# LiveShoppingAnalytics
 
-### Using the starter project
+A real-time analytics dashboard built to help brands unlock insights during live shopping streams. This project captures and models live engagement data to segment customers, predict conversions, and surface actionable metrics that improve digital commerce performance.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
 
+## 🎯 Purpose
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Live shopping is redefining how consumers engage with brands—but most businesses lack the tools to act on that engagement in real time. This project bridges that gap by offering a complete analytics workflow, from event capture to customer segmentation and predictive modeling.
+
+---
+
+## 🏗️ System Design
+
+**🔹 Real-Time Data Simulation & Ingestion**
+- Simulated streaming data (views, clicks, purchases) is generated via Python.
+- Events are sent to **Google Pub/Sub** and ingested into **BigQuery** for storage and processing.
+
+**🔹 Data Transformation with dbt**
+- `fct_sessions`: Processes raw session data  
+- `rfm_analysis`: Calculates Recency, Frequency, and Monetary value  
+- `train_customer_segments`: Performs K-Means clustering via **BigQuery ML**  
+- `customer_segments_named`: Maps clusters to meaningful customer types
+
+**🔹 Predictive Modeling**
+- Predicts conversion probability at the session level  
+- Outputs high-intent segments and lag-based engagement signals
+
+---
+
+## 📊 Dashboard Insights (via Streamlit)
+
+A lightweight UI built in **Streamlit** for visualizing and interacting with real-time KPIs:
+
+- Total Sessions & Unique Viewers  
+- Drop-Off Analysis & Average Session Duration  
+- Click-to-Purchase Lag  
+- Conversion Probability (model-based)  
+- Viewer Engagement Score  
+- RFM-Based Customer Segments (e.g., “High-Value Loyal”)
+
+Includes dynamic filters by:
+- Viewer ID  
+- Device Type  
+- Location  
+
+---
+
+## 🚀 Deployment
+
+- File: `streamlit_app.py`  
+- Backend: Queries handled using `google.cloud.bigquery`  
+- Hosted via **Streamlit Cloud** (auto-deploy from GitHub on push)
+
+---
+
+## 🧰 Tech Stack
+
+| Component       | Tool                     |
+|----------------|--------------------------|
+| Data Streaming | Google Pub/Sub           |
+| Data Warehouse | BigQuery                 |
+| Modeling       | BigQuery ML              |
+| Transformation | dbt                      |
+| Visualization  | Streamlit Cloud          |
+
+---
+
+## 👩‍💻 Project Status
+
+✅ MVP Complete  
+🔜 Next: Integrate real-time feedback loop for content adaptation  
+📦 Data simulation scripts & queries included
+
+---
+
+*Built to help brands personalize live commerce in real time.*  
