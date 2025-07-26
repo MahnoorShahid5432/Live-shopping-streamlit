@@ -73,5 +73,15 @@ Includes dynamic filters by:
 📦 Data simulation scripts & queries included
 
 ---
+<div style="margin-top: 40px; text-align: center; font-family: Arial, sans-serif;">
+  <h3 style="color: #333;">Contributors</h3>
+  <ul style="list-style: none; padding: 0; font-size: 16px;">
+    <li>Jeena Woo</li>
+    <li>Kaylyn Nguyen</li>
+    <li>Rimsa Shrestha</li>
+    <li>Sarah (Xiangwen) Xiong</li>
+  </ul>
+</div>
+
 
 *Built to help brands personalize live commerce in real time.*  
